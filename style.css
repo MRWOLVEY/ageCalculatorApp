@@ -1,11 +1,9 @@
-@font-face{
-    font-family: "cus";
-    src: url(/assets/fonts/);
-}
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Overpass', sans-serif;
 }
 body{
     background-color: hsl(0, 0%, 94%);
@@ -27,10 +25,66 @@ form{
     justify-content: flex-start;
     gap: 1rem;
 }
+.input_span{
+    width:5.8rem;
+    height:1.7rem;
+    border: 1px solid rgb(174, 170, 170);
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+    position: relative;
+}
+
+.input_span:before{
+    position: absolute;
+    top:-25px;
+    left:0px;
+    font-weight:800;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: hsl(0, 1%, 44%);
+}
+#day:before{
+    content: " DAY";
+}
+#month:before{
+    content: " MONTH";
+}
+#year:before{
+    content: " YEAR";
+}
+
+
 input{
+    border:none;
+    width: 100%;
+    height:100%;
+}
+input::placeholder{
+    color: rgb(110, 109, 109);
+    font-size: 1.5rem;
+    font-weight: 780;
+    letter-spacing: -1px;
+    padding: 4px;
+    line-height: 100px;
+}
+
+
+
+
+/* input{
     width:5.5rem;
     height:2.5rem;
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 5px;
     font-size:20px;
+    position: relative;
 }
+ input:before{
+    content: "lol!";
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    border: 10px solid black;
+    top:-10px
+    z-index: 10;
+ } */
