@@ -64,7 +64,7 @@ const dateError = (e,m) => {
         e.target.parentNode.classList.add("error", "dateError");
     }
     else{
-        if (e.target.parentNode.classList.contains("emptyError")===false){
+        if (e.target.parentNode.classList.contains("emptyError")===false && e.target.parentNode.classList.contains("dayError")===false){
             e.target.parentNode.classList.remove("error", "dateError");
         }
         
@@ -86,6 +86,13 @@ inputMonths.addEventListener("input",function(e){
     // }
 })
 inputYears.addEventListener("input",function(e){
+    if (e.target.value % 4 == 0){
+        daysInMonth[1]=29;
+    }
+    else{
+        daysInMonth[1]=28;
+    }
+    yearsb4process=e.target.value;
     emptyError(e);
     yearError(e);
 })
