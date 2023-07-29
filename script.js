@@ -126,8 +126,7 @@ inputMonths.addEventListener("input",function(e){
     okm= emptyError(e) * monthError(e);
 })
 inputYears.addEventListener("input",function(e){
-    emptyError(e);
-    yearError(e);
+    oky = emptyError(e) * yearError(e);
 })
 
 button.addEventListener("click",display);
