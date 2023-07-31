@@ -144,7 +144,7 @@ h1 span{
     content: "Must be a valid date";
 }
 /* make a media query for screens <= 375px */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 720px) {
     .submit button{
         position: absolute;
         left:50%;
