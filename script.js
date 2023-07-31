@@ -105,7 +105,14 @@ const yearError = (e) => {
         }
     }
 }
-const dateError = (e,m) => {
+const dateError = (e,m,y) => {
+    if ((y.firstChild.value % 4 === 0) && (y.firstChild.value % 100 !== 0) || (y.firstChild.value % 400 === 0)) {  
+        daysInMonth[1] = 29;
+    }
+    else{
+        daysInMonth[1] = 28;
+    }
+
     if (e.target.value > daysInMonth[m.firstChild.value-1]){
         e.target.parentNode.classList.add("error", "dateError");
         return 0;
@@ -119,7 +126,7 @@ const dateError = (e,m) => {
     }
 }
 inputDays.addEventListener("input",function(e){
-    okd= emptyError(e) * dayError(e) * dateError(e,inputMonths);
+    okd= emptyError(e) * dayError(e) * dateError(e,inputMonths,inputYears);
 
 })
 inputMonths.addEventListener("input",function(e){
