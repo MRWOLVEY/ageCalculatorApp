@@ -21,6 +21,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 770px;
+    max-height: 660px;
 }
 form{
     display: flex;
