@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
 *{
-    /* padding: 0; */
+    padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     max-width: 770px;
-    max-height: 660px;
+    max-height: 100vh;
 }
 form{
     display: flex;
@@ -31,7 +31,6 @@ form{
 }
 .input_span{
     width:9rem;
-    height:3rem;
     border: none;
     position: relative;
 }
@@ -115,7 +114,7 @@ input:focus{
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight:800;
     font-style: italic;
 }
@@ -147,13 +146,22 @@ h1 span{
 }
 /* make a media query for screens <= 375px */
 @media only screen and (max-width: 768px) {
+    
+    body{
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+    }
+    .container{
+        padding: 4rem 2rem;
+    }
     .submit button{
         position: absolute;
         left:50%;
         transform: translateX(-50%);
     }
     .submit{
-        margin:4rem 0 1rem 0;
+        margin:3rem 0 1rem 0;
     }
     .submit button{
         width: 5rem;
